@@ -9,7 +9,7 @@ st.text('Edli and Sambhar')
 st.title('Here we are taking data from amazon s3 bucket') 
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
-st.multiselect("Pick any fruits from this list: ", list(my_fruit_list.index))
+st.multiselect("Pick any fruits from this list: ", list(my_fruit_list.index),["Orange","Pineapple","Banana"])
 st.dataframe(my_fruit_list)
 
 
